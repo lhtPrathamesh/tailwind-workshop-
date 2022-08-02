@@ -3,7 +3,7 @@ import { history } from "../../managers/history";
 
 function Sidebar() {
   return (
-    <div className="w-24 lg:w-[250px] h-screen  bg-portalBackground border-r-4 border-white">
+    <div className="w-24 lg:w-[250px] h-screen  bg-portalBackground border-r-4 border-white mobile:hidden">
       <div className="flex items-center justify-center pt-[23px] mb-[51px]">
         <img
           src="/images/nftTicketingLogo.svg"
@@ -14,7 +14,9 @@ function Sidebar() {
       </div>
       <div
         className={`flex items-center justify-center lg:justify-start px-2 lg:px-[25px] py-[17px] cursor-pointer ${
-          window.location.pathname === "/dashboard" ? "bg-portalColor6" : ""
+          window.location.pathname === "/dashboard"
+            ? "bg-portalColor6 border-l-[5px] border-[#395FF1]"
+            : ""
         } mb-[10px]`}
         onClick={() => history.push("/dashboard")}
       >
@@ -39,7 +41,9 @@ function Sidebar() {
       </div>
       <div
         className={`flex items-center justify-center lg:justify-start px-2 lg:px-[25px] py-[17px] cursor-pointer ${
-          window.location.pathname === "/whitelist" ? "bg-portalColor6" : ""
+          window.location.pathname === "/whitelist"
+            ? "bg-portalColor6 border-l-[5px] border-[#395FF1]"
+            : ""
         } mb-[10px]`}
         onClick={() => history.push("/whitelist")}
       >

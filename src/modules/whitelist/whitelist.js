@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../header/header";
 import AddIcon from "@mui/icons-material/Add";
 import WhitelistTable from "./whitelistTable";
 
 function Whitelist() {
+  const [searchValue, setSearchValue] = useState("");
   return (
     <div className="bg-portalBackground w-full">
       <Header />
@@ -17,6 +18,8 @@ function Whitelist() {
               type="text"
               placeholder="Search"
               className="bg-transparent outline-none flex-1"
+              value={searchValue}
+              onChange={(e) => setSearchValue(e.target.value)}
             />
             <img src="/images/search.svg" alt="" />
           </div>
@@ -31,7 +34,7 @@ function Whitelist() {
         {/* Whitelist Table Component */}
 
         <div className="w-full">
-          <WhitelistTable />
+          <WhitelistTable searchValue={searchValue} />
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 function Header() {
   return (
-    <div className="w-full h-[65px] bg-white shadow-md shadow-[#949CAE1A] px-[50px] py-[26px] flex items-center">
+    <div className="w-full h-[65px] bg-white shadow-md shadow-[#949CAE1A] px-[50px] py-[26px] mobile:px-6 flex items-center">
       <div className="flex-1 cursor-pointer">
         <img src="/images/menu.svg" alt="" />
       </div>
